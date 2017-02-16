@@ -5,7 +5,7 @@ import universe  # register the universe environments
 #print(gym.envs.registry.all())
 
 
-env = gym.make('gym-core.SkiingDeterministic-v3')
+env = gym.make('gym-core.CartPole-v0')
 env.configure(remotes=1)  # automatically creates a local docker container
 observation_n = env.reset()
 
