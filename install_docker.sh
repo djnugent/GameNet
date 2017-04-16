@@ -7,3 +7,6 @@ apt-cache policy docker-engine
 sudo apt-get install -y docker-engine
 sudo usermod -aG docker $(whoami)
 
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+echo -e "${BLUE} Please logout and log back in for changes to take effect ${NC}"

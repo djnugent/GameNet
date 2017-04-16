@@ -34,16 +34,27 @@ pyyaml \
 pydot \
 opencv-python
 
+#install gym
 sudo pip3 --no-cache-dir install six
 sudo pip3 --no-cache-dir install gym[atari]
-sudo pip3 --no-cache-dir install universe
 
+#install universe
+#rm -rf universe
+#git clone https://github.com/openai/universe.git
+#cd universe
+#sudo pip3 --no-cache-dir install -e .
+#cd ..
+#sudo rm -rf universe
+sudo pip3 --no-cache-dir install git+git://github.com/openai/universe.git@master
 
 # Install tensorflow
-pip3 --no-cache-dir install tensorflow
+sudo pip3 --no-cache-dir install tensorflow
 
 # Install keras
-pip3 --no-cache-dir install keras
+sudo pip3 --no-cache-dir install keras
 
 # Install keras-rl
-pip3 --no-cache-dir install git+git://github.com/matthiasplappert/keras-rl.git@master
+sudo pip3 --no-cache-dir install git+git://github.com/matthiasplappert/keras-rl.git@master
+
+#Install docker
+./install_docker.sh
